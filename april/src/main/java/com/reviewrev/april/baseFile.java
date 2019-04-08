@@ -8,14 +8,16 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 
 public class baseFile {
 
 	public static Properties prop;
 	public static WebDriver driver;
+	public static Actions act;
 	
 		public baseFile() {		
-			prop = new Properties();
+			prop = new Properties();			
 			try {
 				FileInputStream fl = new FileInputStream(System.getProperty("user.dir")+ "\\src\\main\\java\\properties\\object.properties");
 				prop.load(fl);
@@ -38,5 +40,6 @@ public class baseFile {
 			driver.manage().window().maximize();
 			driver.manage().deleteAllCookies();
 			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+			act = new Actions(driver);
 		}	
 }
