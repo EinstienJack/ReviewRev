@@ -31,7 +31,7 @@ public class baseFile {
 		public static void intialize() {			
 			String browerName = prop.getProperty("browser");
 			if (browerName.equalsIgnoreCase("chrome")) {
-				System.setProperty("webdriver.chrome.driver", "C:\\Users\\Einstien\\git\\ReviewRev\\april\\src\\driver\\chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\src\\driver\\chromedriver.exe");
 				driver = new ChromeDriver();
 			} else {
 				driver.quit();
