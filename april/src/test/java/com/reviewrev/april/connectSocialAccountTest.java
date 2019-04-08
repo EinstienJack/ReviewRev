@@ -9,6 +9,7 @@ import pages.homePage;
 import pages.loginPage;
 import utlilities.commonMethods;
 
+
 public class connectSocialAccountTest extends baseFile {
 
 	loginPage log;
@@ -30,8 +31,9 @@ public class connectSocialAccountTest extends baseFile {
 		String pass = "test";
 		boolean rememChk = false;		
 		log.login(usrName, pass, rememChk);		
-		commonMethods.pageLoadWait();
 		home.navigateconnectSocialTile();
+		commonMethods.pageLoadWait();
+		
 		
 		
 	}

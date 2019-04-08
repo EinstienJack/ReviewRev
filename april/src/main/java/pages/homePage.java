@@ -1,8 +1,10 @@
 package pages;
 
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.reviewrev.april.baseFile;
 
@@ -11,7 +13,7 @@ public class homePage extends baseFile{
 	@FindBy (id= "lnkNotifyHub")
 	WebElement notificationIcon;
 	
-	@FindBy (id= "imgProfile")
+	@FindBy (xpath= "//a[@class='icon-Profile icon--xs ct-white']")
 	WebElement profileIcon;
 	
 	@FindBy (linkText= "Business Settings")
@@ -71,6 +73,8 @@ public class homePage extends baseFile{
 	}
 	
 	public void navigateconnectSocialTile() {
-		connectSocialTile.click();		
+		js.executeScript("document.getElementsByClassName('cms-loader no-bg')[0].style.display = 'none';");
+		connectSocialTile = wait.until(ExpectedConditions.elementToBeClickable(connectSocialTile));
+		connectSocialTile.click();			
 	}
 }

@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
+
 import com.reviewrev.april.baseFile;
 
 public class loginPage extends baseFile {
@@ -46,7 +47,7 @@ public class loginPage extends baseFile {
 		loginCTA.click();
 	}
 	
-	public signupPage navigateCreateAccount() {		
+	public signupPage navigateCreateAccount() {			
 		creatAccountURL.click();
 		return new signupPage();
 	}
