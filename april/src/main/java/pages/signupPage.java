@@ -21,7 +21,7 @@ public class signupPage extends baseFile {
 	WebElement phonenumberField;
 	
 	@FindBy (id="btnSignUp")
-	WebElement createAccountCTA;
+	WebElement createAccountCTA;	
 	
 	
 	public signupPage() {		

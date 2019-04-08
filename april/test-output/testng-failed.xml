@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.reviewrev.april.loginPageTest">
+      <class name="com.reviewrev.april.connectSocialAccountTest">
         <methods>
-          <include name="creatProjectTest"/>
-          <include name="Test"/>
           <include name="setup"/>
+          <include name="verifySocialAccountConnect"/>
         </methods>
-      </class> <!-- com.reviewrev.april.loginPageTest -->
+      </class> <!-- com.reviewrev.april.connectSocialAccountTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

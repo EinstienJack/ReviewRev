@@ -41,6 +41,9 @@ public class homePage extends baseFile{
 	@FindBy (xpath= "//a[@data-title='Your Customers']")
 	WebElement customersTile;
 	
+	@FindBy (xpath="//a[@class='upgrade-bar-hide-show']")
+	WebElement subscribeBannerHideShow;	
+	
 	public homePage() {
 		PageFactory.initElements(driver, this);
 	}
