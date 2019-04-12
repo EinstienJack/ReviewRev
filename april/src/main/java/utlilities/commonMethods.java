@@ -15,7 +15,7 @@ public class commonMethods extends baseFile {
 	
 	public static void pageLoadWait() {	
 		js = (JavascriptExecutor)driver;
-		js.executeScript("return document.readyState").equals("complete");
+		js.executeScript("return document.readyState").equals("complete");		
 	}
 	
 	public static String getDateTime() {
