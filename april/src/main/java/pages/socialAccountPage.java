@@ -30,6 +30,11 @@ public class socialAccountPage extends baseFile {
 	
 	public void connectFacebook(String Emailid, String Password, String FBpage)  {
 		
+		// User already connected
+		//Invalid FB login 
+		//FB not a business page
+		//Business Page given was not valid or not exist 
+		
 		String loginValue = Emailid;
 		String passwordValue = Password;
 		String page= FBpage;
@@ -77,7 +82,7 @@ public class socialAccountPage extends baseFile {
 		driver.switchTo().window(MainWindow);
 		
 		try {
-			Thread.sleep(4000);
+			Thread.sleep(1000);
 		} catch (InterruptedException e) {			
 			e.printStackTrace();
 		}		
