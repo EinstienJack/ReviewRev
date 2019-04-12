@@ -46,6 +46,6 @@ public class baseFile {
 			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 			act = new Actions(driver);
 			js = (JavascriptExecutor)driver;
-			wait = new WebDriverWait(driver, 60);	
+			wait = new WebDriverWait(driver, 260);	
 		}	
 }

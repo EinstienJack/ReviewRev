@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 
 import pages.homePage;
 import pages.loginPage;
+import pages.socialAccountPage;
 import utlilities.commonMethods;
 
 
@@ -14,13 +15,14 @@ public class connectSocialAccountTest extends baseFile {
 
 	loginPage log;
 	homePage home;
+	socialAccountPage socialPage;
 	
 	@BeforeTest
 	public void setup() {
 		intialize();
 		log = new loginPage();
 		home = new homePage();
-		
+		socialPage = new socialAccountPage();
 	}
 	
 	@Test
@@ -33,6 +35,8 @@ public class connectSocialAccountTest extends baseFile {
 		log.login(usrName, pass, rememChk);		
 		home.navigateconnectSocialTile();
 		commonMethods.pageLoadWait();
+		socialPage.connectFacebook();
+		
 		
 		
 		
