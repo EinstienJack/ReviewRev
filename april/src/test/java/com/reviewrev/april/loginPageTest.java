@@ -56,7 +56,7 @@ public class loginPageTest extends baseFile{
 		String emailValue = commonMethods.getDateTime()+urlval+"@yopmail.com";
 		String passwordValue = "test";
 		String phonenumber = Long.toString(commonMethods.generateID());		
-		sign.creatProject(emailValue, passwordValue , phonenumber);			
+		//sign.creatProject(emailValue, passwordValue , phonenumber);			
 		} 
 		
 		driver.close();

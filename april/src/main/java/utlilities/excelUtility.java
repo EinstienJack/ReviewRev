@@ -37,7 +37,7 @@ public class excelUtility extends baseFile{
 		return sheet;
 	}
 	
-	public static void getvalue(int rowNumber, int cellNumber) {	
+	public static String getvalue(int rowNumber, int cellNumber) {	
 		Sheet sh =  readExcel();
 		int rowNo = rowNumber ;
 		int cellNo = cellNumber ;					
@@ -45,7 +45,7 @@ public class excelUtility extends baseFile{
 		String value;
 		if (row.getCell(cellNo)!= null) {	value = row.getCell(cellNo).toString(); }
 		else {value = null;}
-		System.out.println(value);
+		return value;
 		}	
 	
 	public static void setvalue(String cellValue1,String cellValue2, int rowNumber) {		
