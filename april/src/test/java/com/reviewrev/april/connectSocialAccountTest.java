@@ -36,7 +36,7 @@ public class connectSocialAccountTest extends baseFile {
 		log.login(usrName, pass, rememChk);		
 		home.navigateconnectSocialTile();
 		commonMethods.pageLoadWait();
-		social.connectFacebook("rusocialpod@gmail.com", "Itsqateam@321" , "Testing team" );
+		social.connectFacebook("rusocialpod@gmail.com", "Itsqateam@32" , "Testing team" );
 		
 		
 	}
