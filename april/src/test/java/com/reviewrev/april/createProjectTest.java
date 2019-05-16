@@ -13,15 +13,9 @@ import utlilities.excelUtility;
 
 
 public class createProjectTest extends baseFile {
-
 	
 	loginPage log;
 	signupPage sign;
-	
-	
-	
-	
-	
 	
 	
 	@BeforeMethod
@@ -29,8 +23,7 @@ public class createProjectTest extends baseFile {
 		intialize();
 		log = new loginPage();	
 		sign = new signupPage();
-	}
-	
+	}	
 	
 	@Test
 	public void creatProjectTest() {
@@ -39,8 +32,7 @@ public class createProjectTest extends baseFile {
 		sign = log.navigateCreateAccount();			
 		excelUtility.ShName = "CreateProject";		
 		Sheet sh = excelUtility.readExcel();
-		int lastRow = sh.getLastRowNum();
-			
+		int lastRow = sh.getLastRowNum();			
 		for (int i=1; i<=3; i++) {			
 			String a = excelUtility.getvalue(i, 0); 
 			String b = excelUtility.getvalue(i, 1);
@@ -50,10 +42,7 @@ public class createProjectTest extends baseFile {
 			sign.creatProject(a,b,c,d,e);
 			
 			
-		}
-		
-		
-	
+		}	
 	}
 	
 	@AfterTest 

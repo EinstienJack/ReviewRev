@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="18034" started-at="2019-05-16T07:01:18Z" finished-at="2019-05-16T07:01:36Z">
+  <suite name="Default suite" duration-ms="6138" started-at="2019-04-13T05:19:10Z" finished-at="2019-04-13T05:19:16Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="18034" started-at="2019-05-16T07:01:18Z" finished-at="2019-05-16T07:01:36Z">
-      <class name="com.reviewrev.april.createProjectTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.reviewrev.april.createProjectTest@59fa1d9b]" name="setup" is-config="true" duration-ms="4374" started-at="2019-05-16T00:01:18Z" finished-at="2019-05-16T00:01:22Z">
+    <test name="Default test" duration-ms="6138" started-at="2019-04-13T05:19:10Z" finished-at="2019-04-13T05:19:16Z">
+      <class name="com.reviewrev.april.connectSocialAccountTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.reviewrev.april.connectSocialAccountTest@28d25987]" name="setup" is-config="true" duration-ms="4300" started-at="2019-04-12T22:19:10Z" finished-at="2019-04-12T22:19:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="creatProjectTest()[pri:0, instance:com.reviewrev.april.createProjectTest@59fa1d9b]" name="creatProjectTest" duration-ms="13646" started-at="2019-05-16T00:01:22Z" finished-at="2019-05-16T00:01:36Z">
+        <test-method status="PASS" signature="testDB()[pri:0, instance:com.reviewrev.april.connectSocialAccountTest@28d25987]" name="testDB" duration-ms="1195" started-at="2019-04-12T22:19:15Z" finished-at="2019-04-12T22:19:16Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- creatProjectTest -->
-        <test-method status="PASS" signature="Test()[pri:0, instance:com.reviewrev.april.createProjectTest@59fa1d9b]" name="Test" is-config="true" duration-ms="1" started-at="2019-05-16T00:01:36Z" finished-at="2019-05-16T00:01:36Z">
+        </test-method> <!-- testDB -->
+        <test-method status="PASS" signature="closeAll()[pri:0, instance:com.reviewrev.april.connectSocialAccountTest@28d25987]" name="closeAll" is-config="true" duration-ms="631" started-at="2019-04-12T22:19:16Z" finished-at="2019-04-12T22:19:16Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Test -->
-      </class> <!-- com.reviewrev.april.createProjectTest -->
+        </test-method> <!-- closeAll -->
+      </class> <!-- com.reviewrev.april.connectSocialAccountTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

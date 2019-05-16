@@ -5,8 +5,9 @@
     <classes>
       <class name="com.reviewrev.april.connectSocialAccountTest">
         <methods>
+          <include name="closeAll"/>
           <include name="setup"/>
-          <include name="verifySocialAccountConnect"/>
+          <include name="testDB"/>
         </methods>
       </class> <!-- com.reviewrev.april.connectSocialAccountTest -->
     </classes>

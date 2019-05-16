@@ -2,6 +2,9 @@ package com.reviewrev.april;
 
 
 
+import java.sql.SQLException;
+
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -19,7 +22,7 @@ public class connectSocialAccountTest extends baseFile {
 	
 	@BeforeTest
 	public void setup() {
-		intialize();
+	    intialize();
 		log = new loginPage();
 		home = new homePage();
 		social = new socialAccountPage();
@@ -27,18 +30,30 @@ public class connectSocialAccountTest extends baseFile {
 	}
 	
 	@Test
-	public void verifySocialAccountConnect()  {		
-		String url = prop.getProperty("qaURL");		
-		driver.get(url);		
-		String usrName = "01noccqa0904@yopmail.com";
-		String pass = "test";
-		boolean rememChk = false;		
-		log.login(usrName, pass, rememChk);		
-		home.navigateconnectSocialTile();
-		commonMethods.pageLoadWait();
-		social.connectFacebook("rusocialpod@gmail.com", "Itsqateam@32" , "Testing team" );
-		
-		
+	public void testDB () throws ClassNotFoundException, SQLException {
+		commonMethods.connectDatabase();
 	}
 	
+	
+//	@Test
+//	public void verifySocialAccountConnect()  {		
+//		
+////		String url = prop.getProperty("qaURL");		
+////		driver.get(url);		
+////		String usrName = "01noccqa0904@yopmail.com";
+////		String pass = "test";
+////		boolean rememChk = false;		
+////		log.login(usrName, pass, rememChk);		
+////		home.navigateconnectSocialTile();
+////		commonMethods.pageLoadWait();
+////		social.connectFacebook("rusocialpod@gmail.com", "Itsqateam@321" , "Testing Red" );		
+//	}
+	
+	@AfterTest
+	public void closeAll() {
+		driver.quit();
+	}	
+
 }
+	
+
