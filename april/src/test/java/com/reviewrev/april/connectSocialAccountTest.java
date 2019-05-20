@@ -29,25 +29,25 @@ public class connectSocialAccountTest extends baseFile {
 		
 	}
 	
-	@Test
-	public void testDB () throws ClassNotFoundException, SQLException {
-		commonMethods.connectDatabase();
-	}
-	
-	
 //	@Test
-//	public void verifySocialAccountConnect()  {		
-//		
-////		String url = prop.getProperty("qaURL");		
-////		driver.get(url);		
-////		String usrName = "01noccqa0904@yopmail.com";
-////		String pass = "test";
-////		boolean rememChk = false;		
-////		log.login(usrName, pass, rememChk);		
-////		home.navigateconnectSocialTile();
-////		commonMethods.pageLoadWait();
-////		social.connectFacebook("rusocialpod@gmail.com", "Itsqateam@321" , "Testing Red" );		
+//	public void testDB () throws ClassNotFoundException, SQLException {
+//		commonMethods.connectDatabase();
 //	}
+	
+	
+	@Test (enabled=true)
+	public void verifySocialAccountConnect()  {		
+		
+		String url = prop.getProperty("qaURL");		
+		driver.get(url);		
+		String usrName = "01noccqa0904@yopmail.com";
+		String pass = "test";
+		boolean rememChk = false;		
+		log.login(usrName, pass, rememChk);		
+		home.navigateconnectSocialTile();
+		commonMethods.pageLoadWait();
+		social.connectFacebook("rusocialpod@gmail.com", "Itsqateam@321" , "Testing Red" );		
+	}
 	
 	@AfterTest
 	public void closeAll() {

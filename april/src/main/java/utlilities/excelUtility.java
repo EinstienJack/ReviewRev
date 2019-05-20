@@ -59,7 +59,7 @@ public class excelUtility extends baseFile{
 		cell = sh.getRow(rowNo).createCell(6);
 		cell.setCellValue(value2);
 		cell = sh.getRow(rowNo).createCell(7);
-		cell.setCellValue(value3);
+		cell.setCellValue(value3);	
 		try {
 			ips.close();
 		} catch (IOException e) {			
