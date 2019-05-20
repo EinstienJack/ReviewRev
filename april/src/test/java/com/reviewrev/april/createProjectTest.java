@@ -38,7 +38,8 @@ public class createProjectTest extends baseFile {
 		String url = prop.getProperty("qaURL");
 		excelUtility.ShName = "CreateProject";		
 		Sheet sh = excelUtility.readExcel();
-		int lastRow = sh.getLastRowNum();				
+		int lastRow = sh.getLastRowNum();
+		
 		for (int i=1; i<=lastRow; i++) {		
 			String check = excelUtility.getvalue(i, 5);				
 			if (check==null || check.length()==0) {				

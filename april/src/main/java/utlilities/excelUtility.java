@@ -22,7 +22,7 @@ public class excelUtility extends baseFile{
 	static FileInputStream ips;
 	static FileOutputStream ops;
 	static Cell cell = null;
-	static File fl = new File(prop.getProperty("exceldata"));
+	static File fl = new File(System.getProperty("user.dir")+"\\data\\ReviewRev.xlsx");
 	
 	public static Sheet readExcel() {			
 		try {

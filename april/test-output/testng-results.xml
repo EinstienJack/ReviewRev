@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="41446" started-at="2019-05-20T07:01:51Z" finished-at="2019-05-20T07:02:33Z">
+  <suite name="Default suite" duration-ms="25825" started-at="2019-05-20T12:29:54Z" finished-at="2019-05-20T12:30:20Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="41446" started-at="2019-05-20T07:01:51Z" finished-at="2019-05-20T07:02:33Z">
+    <test name="Default test" duration-ms="25825" started-at="2019-05-20T12:29:54Z" finished-at="2019-05-20T12:30:20Z">
       <class name="com.reviewrev.april.createProjectTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.reviewrev.april.createProjectTest@4501b7af]" name="setup" is-config="true" duration-ms="4153" started-at="2019-05-20T00:01:51Z" finished-at="2019-05-20T00:01:56Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.reviewrev.april.createProjectTest@29774679]" name="setup" is-config="true" duration-ms="4469" started-at="2019-05-20T17:59:54Z" finished-at="2019-05-20T17:59:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="creatProjectFromExcel()[pri:0, instance:com.reviewrev.april.createProjectTest@4501b7af]" name="creatProjectFromExcel" duration-ms="36659" started-at="2019-05-20T00:01:56Z" finished-at="2019-05-20T00:02:32Z">
+        <test-method status="PASS" signature="creatProjectFromExcel()[pri:0, instance:com.reviewrev.april.createProjectTest@29774679]" name="creatProjectFromExcel" duration-ms="20719" started-at="2019-05-20T17:59:59Z" finished-at="2019-05-20T18:00:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- creatProjectFromExcel -->
-        <test-method status="PASS" signature="Test()[pri:0, instance:com.reviewrev.april.createProjectTest@4501b7af]" name="Test" is-config="true" duration-ms="619" started-at="2019-05-20T00:02:32Z" finished-at="2019-05-20T00:02:33Z">
+        <test-method status="PASS" signature="Test()[pri:0, instance:com.reviewrev.april.createProjectTest@29774679]" name="Test" is-config="true" duration-ms="624" started-at="2019-05-20T18:00:20Z" finished-at="2019-05-20T18:00:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Test -->

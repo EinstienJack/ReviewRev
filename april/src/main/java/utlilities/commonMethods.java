@@ -48,7 +48,7 @@ public class commonMethods extends baseFile {
 	
 	public static String captureScreenShot(){		    
 		File src=((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);	
-		String path = "C:\\Users\\Einstien\\git\\ReviewRev\\april\\screenshot\\screenshot"+System.currentTimeMillis()+".png";
+		String path = System.getProperty("user.dir")+"\\screenshot\\screenshot"+System.currentTimeMillis()+".png";		
 		try {		 
 		FileUtils.copyFile(src, new File(path));  
 		} catch (IOException e) {
