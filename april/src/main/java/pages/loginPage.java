@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -7,6 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 
 
 import com.reviewrev.april.baseFile;
+
+import utlilities.commonMethods;
 
 public class loginPage extends baseFile {
 
@@ -28,9 +31,6 @@ public class loginPage extends baseFile {
 	@FindBy(id="ancSignup")
 	WebElement creatAccountURL;
 	
-	
-	
-	
 	public loginPage() {		
 		PageFactory.initElements(driver, this);		
 	}
@@ -44,7 +44,17 @@ public class loginPage extends baseFile {
 		if (value3) {
 			rememberMeCheckBox.click();
 		}
-		loginCTA.click();
+		loginCTA.click();		
+		String [] login_output = {"Status", "Output", ""};
+		commonMethods.pageLoadWait();
+		if (driver.getCurrentUrl().contains("home")) {
+			login_output[0] = "Pass";
+			login_output[1] = driver.getCurrentUrl().toString();			
+		} else {
+			login_output[0] = "Error";
+			login_output[1] = driver.findElement(By.id("loginErrorMessage")).toString();
+			login_output[2] = commonMethods.captureScreenShot();
+		}		
 	}
 	
 	public signupPage navigateCreateAccount() {			

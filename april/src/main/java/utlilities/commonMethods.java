@@ -13,10 +13,6 @@ import java.util.Date;
 import java.util.Random;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.poi.xssf.usermodel.XSSFCell;
-import org.apache.poi.xssf.usermodel.XSSFRow;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -59,6 +55,11 @@ public class commonMethods extends baseFile {
 			e.printStackTrace();
 		}
 		return path;
+	}
+	
+	
+	public static void generateReport(){		    
+		
 	}
 	
 	
