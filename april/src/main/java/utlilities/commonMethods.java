@@ -1,5 +1,7 @@
 package utlilities;
 
+import java.io.File;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -10,11 +12,14 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 
 import com.reviewrev.april.baseFile;
 
@@ -44,6 +49,18 @@ public class commonMethods extends baseFile {
 	    }
 	    return Long.parseLong(new String(digits));
 	}
+	
+	public static String captureScreenShot(){		    
+		File src=((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);	
+		String path = "C:\\Users\\Einstien\\git\\ReviewRev\\april\\screenshot\\screenshot"+System.currentTimeMillis()+".png";
+		try {		 
+		FileUtils.copyFile(src, new File(path));  
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return path;
+	}
+	
 	
 	
 	public static void connectDatabase() throws ClassNotFoundException, SQLException {		

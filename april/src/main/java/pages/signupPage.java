@@ -1,10 +1,13 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.reviewrev.april.baseFile;
+
+import utlilities.commonMethods;
 
 public class signupPage extends baseFile {
 	
@@ -36,12 +39,13 @@ public class signupPage extends baseFile {
 		PageFactory.initElements(driver, this);
 	}	
 	
-	public void creatProject(String fName, String lName, String phonenumber, String email, String password) {
+	public String [] creatProject(String fName, String lName, String phonenumber, String email, String password) {
 		String value1 =fName;
 		String value2 =lName;
 		String value3 = phonenumber;
 		String value4 = email;
 		String value5 = password;
+		String op [] = {"Status", "Output", ""};
 		
 		firstNameField.sendKeys(value1);
 		lastNameField.sendKeys(value2);
@@ -50,6 +54,21 @@ public class signupPage extends baseFile {
 		passwordField.sendKeys(value5);
 		confirmpasswordField.sendKeys(value5);		
 		createAccountCTA.click();
+		commonMethods.pageLoadWait();
+		
+		
+		if (driver.getCurrentUrl().contains("thankyou")) {			
+			   driver.findElement(By.id("lnkContinueBtn")).click();
+			   commonMethods.pageLoadWait();
+			   op[0] = "Pass";
+			   op[1] = driver.getCurrentUrl().toString();
+		}		
+		else {	
+				WebElement error = driver.findElement(By.id("signUpErrorMessage"));
+				op[0] = "Error";
+				op[1] = error.getText();
+				op[2]= commonMethods.captureScreenShot();
+		}		
+		return op;		
 	}
-
 }

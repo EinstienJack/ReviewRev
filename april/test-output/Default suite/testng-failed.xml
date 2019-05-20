@@ -5,7 +5,7 @@
     <classes>
       <class name="com.reviewrev.april.createProjectTest">
         <methods>
-          <include name="creatProjectTest"/>
+          <include name="creatProjectFromExcel"/>
           <include name="Test"/>
           <include name="setup"/>
         </methods>

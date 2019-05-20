@@ -48,15 +48,18 @@ public class excelUtility extends baseFile{
 		return value;
 		}	
 	
-	public static void setvalue(String cellValue1,String cellValue2, int rowNumber) {		
+	public static void setvalue(String cellValue1,String cellValue2, String cellValue3, int rowNumber) {		
 		Sheet sh =  readExcel();
 		int rowNo = rowNumber ;			
 		String value1 = cellValue1 ;
-		String value2 = cellValue2 ;		
+		String value2 = cellValue2 ;	
+		String value3 = cellValue3;
 		cell = sh.getRow(rowNo).createCell(5);
 		cell.setCellValue(value1);
 		cell = sh.getRow(rowNo).createCell(6);
 		cell.setCellValue(value2);
+		cell = sh.getRow(rowNo).createCell(7);
+		cell.setCellValue(value3);
 		try {
 			ips.close();
 		} catch (IOException e) {			
